@@ -1,0 +1,27 @@
+#container-one {
+	display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#container-two {
+	display: flex;
+  flex-direction: row;
+	justify-content: space-around;
+}
+
+
+.btn {
+  background: rgba(191, 191, 191, 1);
+  color: rgba(255,255,255, 1);
+  margin: 0 10px 0 10px;
+  border-radius: 5px;
+  border-color: rgba(191, 191, 191, 1);
+}
+
+#parse {
+  border-radius: 5px;
+  border-color: rgba(191, 191, 191, 1);
+  width: 20px;
+}
