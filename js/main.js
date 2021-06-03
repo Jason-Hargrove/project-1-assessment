@@ -1,18 +1,12 @@
 // ========= dom nodes =========
 const add = document.querySelector('#add');
 const subtract = document.querySelector('#subtract');
-const parse = document.querySelector('#parse');
 const number = document.querySelector('#number');
-const heading = document.querySelector('h1');
 
 
 // ========== the main numbers being manipulated ===========
 // ----- top number -----
 let newNumber = 0;
-
-// ----- bottom number -----
-// ---- works ----
-let bottomNumber = [];
 
 
 // ========== functions ==========
@@ -25,7 +19,7 @@ const startNumber = () => {
 }
 startNumber();
 
-// --------- color change number ----------
+// --------- color change  ----------
 const colorChange = () => {
   if (newNumber <= 0) {
     document.querySelector('h1').style.color = "red";
@@ -35,37 +29,26 @@ const colorChange = () => {
   }
 }
 
-// ---------- color change button ----------
-
 
 // ========== Listeners ==========
-
-/////////////////////////////// focus //////////////////////////////////////////////
-
 // ----- adding -----
 add.addEventListener('click', function(e) {
-  const val = parseInt(document.querySelector('input.valueInputField').value, 10);
-  newNumber++;
+  const val = parseInt(document.querySelector('input.parse').value, 10);
+  newNumber += val;
   colorChange();
   document.querySelector('h1').innerHTML = newNumber;
-
-  console.log(val);
-
-  // bottomNumber.push(e);
-
-  // let value = this.value;
-  // console.log(bottomNumber)
-
 });
-
-/////////////////////////////// end focus //////////////////////////////////////////////
 
 // ----- subtracting -----
 subtract.addEventListener('click', function(e) {
-  newNumber--;
+  const val = parseInt(document.querySelector('input.parse').value, 10);
+  newNumber -= val;
   colorChange();
   document.querySelector('h1').innerHTML = newNumber;
 });
+
+
+// ↓↓↓↓↓ --------- color change buttons listeners ---------- ↓↓↓↓↓
 
 // ----- adding button color change -----
 add.addEventListener('mouseover', function(e) {
