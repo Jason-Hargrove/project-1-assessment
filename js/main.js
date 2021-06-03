@@ -15,9 +15,6 @@ let newNumber = 0;
 let bottomNumber = [];
 
 
-// const val = parseInt(document.querySelector('input.valueInputField').value, 10);
-
-
 // ========== functions ==========
 // --------- creating the starting number ----------
 const startNumber = () => {
@@ -47,14 +44,17 @@ const colorChange = () => {
 
 // ----- adding -----
 add.addEventListener('click', function(e) {
+  const val = parseInt(document.querySelector('input.valueInputField').value, 10);
   newNumber++;
   colorChange();
   document.querySelector('h1').innerHTML = newNumber;
 
-  bottomNumber.push(e);
+  console.log(val);
+
+  // bottomNumber.push(e);
 
   // let value = this.value;
-  console.log(bottomNumber)
+  // console.log(bottomNumber)
 
 });
 
