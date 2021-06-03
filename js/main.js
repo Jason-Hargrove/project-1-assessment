@@ -6,8 +6,16 @@ const number = document.querySelector('#number');
 const heading = document.querySelector('h1');
 
 
-// ========== the main number being manipulated ===========
-let newNumber = 0
+// ========== the main numbers being manipulated ===========
+// ----- top number -----
+let newNumber = 0;
+
+// ----- bottom number -----
+// ---- works ----
+let bottomNumber = [];
+
+
+// const val = parseInt(document.querySelector('input.valueInputField').value, 10);
 
 
 // ========== functions ==========
@@ -33,15 +41,24 @@ const colorChange = () => {
 // ---------- color change button ----------
 
 
-
 // ========== Listeners ==========
+
+/////////////////////////////// focus //////////////////////////////////////////////
 
 // ----- adding -----
 add.addEventListener('click', function(e) {
   newNumber++;
   colorChange();
   document.querySelector('h1').innerHTML = newNumber;
+
+  bottomNumber.push(e);
+
+  // let value = this.value;
+  console.log(bottomNumber)
+
 });
+
+/////////////////////////////// end focus //////////////////////////////////////////////
 
 // ----- subtracting -----
 subtract.addEventListener('click', function(e) {
@@ -71,7 +88,3 @@ subtract.addEventListener('mouseout', function(e) {
   subtract.style.color = "rgba(255,255,255, 1)";
   subtract.style.background = "rgba(191, 191, 191, 1)";
 });
-
-
-
-// const val = parseInt(document.querySelector('input.valueInputField').value, 10);
